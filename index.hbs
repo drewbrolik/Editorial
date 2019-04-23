@@ -5,7 +5,7 @@ into the {body} of the default.hbs template --}}
 
 {{!-- Featured Post --}}
 {{#is "home"}}
-{{#get "posts" filter="featured:true" limit="1" as |featured_post|}}
+{{#get "posts" filter="featured:true" limit="3" as |featured_post|}}
     {{#foreach featured_post}}
         <article id="banner">
             <div class="content">
