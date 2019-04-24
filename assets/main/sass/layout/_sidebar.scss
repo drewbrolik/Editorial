@@ -40,10 +40,11 @@
 		@include vendor('flex-grow', '0');
 		@include vendor('flex-shrink', '0');
 		@include vendor('transition', (
-			'margin-left 0.5s ease',
+			'margin-right 0.5s ease',
 			'box-shadow 0.5s ease'
 		));
-		background-color: _palette(bg-alt);
+		background-color: white; /*_palette(bg-alt);*/
+		box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.075);
 		font-size: 0.9em;
 		position: relative;
 		width: _size(sidebar-width);
@@ -58,7 +59,7 @@
 			width: _size(sidebar-width);
 
 			> * {
-				border-bottom: solid 2px _palette(border);
+				/*border-bottom: solid 2px _palette(fg-border);*/
 				margin: 0 0 (_size(element-margin) * 1.75) 0;
 				padding: 0 0 (_size(element-margin) * 1.75) 0;
 
@@ -89,7 +90,7 @@
 			border: 0;
 			display: block;
 			height: 7.5em;
-			left: _size(sidebar-width);
+			right: _size(sidebar-width);
 			line-height: 7.5em;
 			outline: 0;
 			overflow: hidden;
@@ -114,7 +115,7 @@
 		}
 
 		&.inactive {
-			margin-left: (_size(sidebar-width) * -1);
+			margin-right: (_size(sidebar-width) * -1);
 		}
 
 		@include breakpoint('<=xlarge') {
@@ -135,7 +136,7 @@
 
 			.toggle {
 				height: 6.25em;
-				left: _size(sidebar-width-alt);
+				right: _size(sidebar-width-alt);
 				line-height: 6.25em;
 				text-indent: 5em;
 				width: 5em;
@@ -146,14 +147,14 @@
 			}
 
 			&.inactive {
-				margin-left: (_size(sidebar-width-alt) * -1);
+				margin-right: (_size(sidebar-width-alt) * -1);
 			}
 		}
 
 		@include breakpoint('<=large') {
 			box-shadow: 0 0 5em 0 rgba(0, 0, 0, 0.175);
 			height: 100%;
-			left: 0;
+			right: 0;
 			position: fixed;
 			top: 0;
 			z-index: _misc(z-index-base);
